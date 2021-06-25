@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
+import {HashRouter as Router, Link, Route, Switch} from "react-router-dom";
 import 'semantic-ui-css/semantic.min.css'
 import tv from "./statics/images/TV.png"
 import {Tech} from "./Tech";
