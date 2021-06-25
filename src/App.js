@@ -13,7 +13,7 @@ class App extends React.Component{
 				<Link className="item" to="/home">
 					<img src={tv} alt="Logo"/>
 				</Link>
-				<Link className="item" to="/blog">博客</Link>
+				<Link className="item" to="/blog/">博客</Link>
 				<Link className="item" to="/tech">科技</Link>
 				<Link className="item" to="/about">关于</Link>
 			
