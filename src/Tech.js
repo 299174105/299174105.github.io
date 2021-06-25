@@ -6,11 +6,11 @@ export function Tech() {
 	return (
 		<div>
 			<div className="ui  segment">
-				<img className="ui wireframe image" src={short_paragraph}/>
+				<img className="ui wireframe image" src={short_paragraph} alt="alt"/>
 			
 			</div>
 			<div className="ui segment">
-				<img className="ui wireframe image" src={paragraph}/>
+				<img className="ui wireframe image" src={paragraph} alt="alt"/>
 			</div>
 		</div>
 	);
