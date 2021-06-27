@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {Card, CardContent, CardGroup, CommentAuthor} from "semantic-ui-react";
+import {Card, CardContent, CardGroup, CommentAuthor, Image} from "semantic-ui-react";
 
 export class BlogList extends React.Component {
 	render() {
@@ -8,6 +8,12 @@ export class BlogList extends React.Component {
 			<CardGroup itemsPerRow="4">
 			<Card raised  as={Link} to="/blog/1">
 				<Card.Content>
+					<Image
+						avatar
+						floated='right'
+						size='tiny'
+						src='/images/avatar(blue).png'
+					/>
 					<Card.Header>Dcoker-redis</Card.Header>
 					<Card.Meta>accel</Card.Meta>
 				<Card.Description>use redis on docker</Card.Description>
@@ -21,6 +27,12 @@ export class BlogList extends React.Component {
 			<Card raised  as={Link} to="/blog/2">
 				
 				<Card.Content>
+					<Image
+						avatar
+						floated='right'
+						size='tiny'
+						src='/images/avatar(blue).png'
+					/>
 					<Card.Header>Dcoker-rabbitMQ</Card.Header>
 					<Card.Meta >accel</Card.Meta>
 					<Card.Description>use rabbitMQ on docker</Card.Description>
@@ -32,11 +44,18 @@ export class BlogList extends React.Component {
 				</CardContent>
 			</Card>
 			<Card as={Link} to="/blog/3">
-				<Card.Content
-					header='Dcoker-bitwarden'
-					meta='accel'
-					description='use bitwarden on docker'
+				<Card.Content>
+				<Image
+					avatar
+					floated='right'
+					size='tiny'
+					src='/images/avatar(blue).png'
 				/>
+					<Card.Header>Dcoker-bitwarden</Card.Header>
+					<Card.Meta >accel</Card.Meta>
+					<Card.Description>use bitwarden on docker</Card.Description>
+				</Card.Content>
+				
 				<CardContent extra>
 					<CommentAuthor >
 						bitwarden
@@ -44,11 +63,17 @@ export class BlogList extends React.Component {
 				</CardContent>
 			</Card>
 				<Card as={Link} to="/blog/4">
-					<Card.Content
-						header='Dcoker-jellyfin'
-						meta='accel'
-						description='use jellyfin on docker'
-					/>
+					<Card.Content>
+						<Image
+							avatar
+							floated='right'
+							size='tiny'
+							src='/images/avatar(blue).png'
+						/>
+						<Card.Header>Dcoker-jellyfin</Card.Header>
+						<Card.Meta >accel</Card.Meta>
+						<Card.Description>use jellyfin on docker</Card.Description>
+					</Card.Content>
 					<CardContent extra>
 						<CommentAuthor >
 							jellyfin
