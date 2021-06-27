@@ -14,9 +14,9 @@ export class BlogList extends React.Component {
 						size='tiny'
 						src='/images/avatar(blue).png'
 					/>
-					<Card.Header>Dcoker-redis</Card.Header>
+					<Card.Header>Docker-redis</Card.Header>
 					<Card.Meta>accel</Card.Meta>
-				<Card.Description>use redis on docker</Card.Description>
+				<Card.Description>install redis on docker</Card.Description>
 				</Card.Content>
 				<CardContent extra>
 					<CommentAuthor >
@@ -33,9 +33,9 @@ export class BlogList extends React.Component {
 						size='tiny'
 						src='/images/avatar(blue).png'
 					/>
-					<Card.Header>Dcoker-rabbitMQ</Card.Header>
+					<Card.Header>Docker-rabbitMQ</Card.Header>
 					<Card.Meta >accel</Card.Meta>
-					<Card.Description>use rabbitMQ on docker</Card.Description>
+					<Card.Description>install rabbitMQ on docker</Card.Description>
 				</Card.Content>
 				<CardContent extra>
 					<CommentAuthor >
@@ -51,9 +51,9 @@ export class BlogList extends React.Component {
 					size='tiny'
 					src='/images/avatar(blue).png'
 				/>
-					<Card.Header>Dcoker-bitwarden</Card.Header>
+					<Card.Header>Docker-bitwarden</Card.Header>
 					<Card.Meta >accel</Card.Meta>
-					<Card.Description>use bitwarden on docker</Card.Description>
+					<Card.Description>install bitwarden on docker</Card.Description>
 				</Card.Content>
 				
 				<CardContent extra>
@@ -70,9 +70,9 @@ export class BlogList extends React.Component {
 							size='tiny'
 							src='/images/avatar(blue).png'
 						/>
-						<Card.Header>Dcoker-jellyfin</Card.Header>
+						<Card.Header>Docker-jellyfin</Card.Header>
 						<Card.Meta >accel</Card.Meta>
-						<Card.Description>use jellyfin on docker</Card.Description>
+						<Card.Description>install jellyfin on docker</Card.Description>
 					</Card.Content>
 					<CardContent extra>
 						<CommentAuthor >
