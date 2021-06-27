@@ -1,2 +1,0 @@
-(this.webpackJsonphome=this.webpackJsonphome||[]).push([[3],{124:function(e,t,s){"use strict";s.r(t),t.default=s.p+"static/media/article-1.c42d2ed6.md"}}]);
-//# sourceMappingURL=3.6bdfaa58.chunk.js.map

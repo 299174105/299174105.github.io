@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/about.css","webpack://src/components/app.css"],"names":[],"mappings":"AAAA,OACC,YACD,CCFA,YACC,aACD,CAEA,cACC,gBACD","file":"main.7a69a758.chunk.css","sourcesContent":[".about {\n\tmargin: 0 40%;\n}\n",".my-nav-bar {\n\tmargin: 0 20px;\n}\n\n.my-container {\n\tmargin: 10px 20px;\n}\n\n"]}
