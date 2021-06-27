@@ -1,9 +1,9 @@
 {
   "posts": [
-    {"id": 1,"title": "redis","path": "../posts/article-1-redis.md","brief": "blog about redis"},
-    {"id": 2,"title": "redis2","path": "../posts/article-2-redis.md","brief": "blog about redis2"},
-    {"id": 3,"title": "redis3","path": "../posts/article-3-redis.md","brief": "blog about redis3"},
-    {"id": 4,"title": "redis4","path": "../posts/article-4-redis.md","brief": "blog about redis4"},
-    {"id": 5,"title": "redis5","path": "../posts/article-5-redis.md","brief": "blog about redis5"}
+    {"id": 1,"title": "redis","time": "20210627","path": "../posts/article-1-redis.md","brief": "blog about redis"},
+    {"id": 2,"title": "redis2","time": "20210627","path": "../posts/article-2-redis.md","brief": "blog about redis2"},
+    {"id": 3,"title": "redis3","time": "20210627","path": "../posts/article-3-redis.md","brief": "blog about redis3"},
+    {"id": 4,"title": "redis4","time": "20210627","path": "../posts/article-4-redis.md","brief": "blog about redis4"},
+    {"id": 5,"title": "redis5","time": "20210627","path": "../posts/article-5-redis.md","brief": "blog about redis5"}
   ]
 }

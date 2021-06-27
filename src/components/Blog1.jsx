@@ -4,7 +4,7 @@ import Markdown from "markdown-to-jsx";
 class Blog1 extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state={markdown: "hello world"}
+		this.state={markdown: ""}
 	}
 	
 	async componentDidMount() {
