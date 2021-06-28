@@ -5,7 +5,7 @@ import {Card, CardContent, CardGroup, CommentAuthor, Image} from "semantic-ui-re
 export class BlogList extends React.Component {
 	render() {
 		return (<div style={{margin:"10px 20px"}}>
-			<CardGroup itemsPerRow="4">
+			<CardGroup itemsPerRow="4" stackable={true}>
 			<Card raised  as={Link} to="/blog/1">
 				<Card.Content>
 					<Image

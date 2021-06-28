@@ -1,0 +1,31 @@
+video#background-video {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background: url(images/poster.webp) no-repeat;
+    background-size: cover;
+}
+div#root {
+    background-color: #ffffff;
+    z-index: 3;
+}
+#about-hidden {
+    font-weight: 100;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    padding: 1rem;
+    width: 30%;
+    position: fixed; left: 33%; top: 83px;
+    font-size: 1.2rem;
+    z-index: -1;
+}
+
+#about-hidden p {
+
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: rgba(248, 245, 245, 0.87);
+    text-transform: uppercase;
+    text-align: center;
+}

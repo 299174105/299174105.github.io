@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-      <link rel="stylesheet" href="%PUBLIC_URL%/github-markdown.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/github-markdown.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/background.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -23,6 +24,12 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-
+    <video autoplay loop muted poster="%PUBLIC_URL%/images/poster.jpg" id="background-video">
+      <source src="%PUBLIC_URL%/videos/background.webm" type="video/webm">
+      <source src="%PUBLIC_URL%/videos/background.mp4" type="video/mp4">
+    </video>
+  <div id="about-hidden">
+    <p>About Me:?</p>
+</div>
   </body>
 </html>

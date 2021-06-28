@@ -4,5 +4,9 @@
 
 .my-container {
 	margin: 10px 20px;
+    height: 100%;
+}
+.home {
+    padding-bottom: 10px;
 }
 

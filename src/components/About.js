@@ -4,7 +4,7 @@ export class About extends React.Component {
 	render() {
 		return (
 				<div className="about">
-				about me:?
+					{/*<Statistic label="about me:?"/>*/}
 				</div>
 			
 		)
