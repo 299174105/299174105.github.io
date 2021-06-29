@@ -1,7 +1,6 @@
 import React from "react";
 import {HashRouter as Router, Link, Route, Switch} from "react-router-dom";
 import 'semantic-ui-css/semantic.min.css'
-import {Tech} from "./Tech";
 import {About} from "./About";
 import {Grid, Menu} from "semantic-ui-react";
 import "./app.css"
@@ -21,10 +20,10 @@ class App extends React.Component{
 						name='主页'
 						as = {Link} to="/home"
 					/>
-					<Menu.Item
+					{/*<Menu.Item
 						name='技术'
 						as = {Link} to="/tech"
-					/>
+					/>*/}
 					<Menu.Item
 						name='博客'
 						as = {Link} to="/blog"
@@ -48,11 +47,9 @@ class App extends React.Component{
 					<Route exact path={["/","/home","/blog"]}>
 						<Home/>
 					</Route>
-					<Route path="/tech">
-						<Tech/>
-					</Route>
 					<Route path="/blog/:id" component={Blog1}  />
 				</Switch>
+					
 					</Grid.Column>
 				<Grid.Column width={4}>
 				<Switch>
