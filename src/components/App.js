@@ -3,7 +3,7 @@ import {HashRouter as Router, Link, Route, Switch} from "react-router-dom";
 import 'semantic-ui-css/semantic.min.css'
 import {Tech} from "./Tech";
 import {About} from "./About";
-import {Menu} from "semantic-ui-react";
+import {Grid, Menu} from "semantic-ui-react";
 import "./app.css"
 import {Home} from "./Home";
 import {BlogList} from "./BlogList";
@@ -37,23 +37,36 @@ class App extends React.Component{
 					</Menu.Menu>
 				</Menu>
 			</div>
-			<div className="blogs-urls">
-				<Switch>
-					<Route path="/blog"><BlogList/></Route>
-				</Switch>
-			</div>
+			
 			<div className="my-container">
 				<Switch>
-					<Route exact path={["/","/home"]}>
+					<Route exact  path="/about"><About/></Route>
+				</Switch>
+			<Grid>
+				<Grid.Column width={12}>
+				<Switch>
+					<Route exact path={["/","/home","/blog"]}>
 						<Home/>
 					</Route>
 					<Route path="/tech">
 						<Tech/>
 					</Route>
 					<Route path="/blog/:id" component={Blog1}  />
-					<Route  path="/about"><About/></Route>
 				</Switch>
+					</Grid.Column>
+				<Grid.Column width={4}>
+				<Switch>
+					<Route exact path={["/","/tech","/home","/blog/:id","/blog"]}><BlogList/></Route>
+				</Switch>
+					</Grid.Column>
+				</Grid>
 			</div>
+			
+			
+			
+			
+			
+			
 			
 			
 		</Router>
