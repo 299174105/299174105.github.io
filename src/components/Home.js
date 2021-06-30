@@ -30,7 +30,7 @@ export class Home extends React.Component {
           <span>accel</span>
         </Item.Meta>
         <Item.Description>How to install RabbitMQ on docker</Item.Description>
-		  <Item.Extra as={Link} to="/blog/1">read more</Item.Extra>
+		  <Item.Extra as={Link} to="/blog/2">read more</Item.Extra>
       </Item.Content>
 				</Item>
 				<Item>
@@ -42,7 +42,7 @@ export class Home extends React.Component {
           <span>accel</span>
         </Item.Meta>
         <Item.Description>How to install Bitwarden on docker</Item.Description>
-		  <Item.Extra as={Link} to="/blog/1">read more</Item.Extra>
+		  <Item.Extra as={Link} to="/blog/3">read more</Item.Extra>
       </Item.Content>
 				</Item>
 				<Item>
@@ -54,8 +54,21 @@ export class Home extends React.Component {
           <span>accel</span>
         </Item.Meta>
         <Item.Description>How to install jellyfin on docker</Item.Description>
-		  <Item.Extra as={Link} to="/blog/1">read more</Item.Extra>
+		  <Item.Extra as={Link} to="/blog/4">read more</Item.Extra>
       </Item.Content>
+				</Item>
+				
+				<Item>
+					<Item.Image  size='small' src='/images/ssh.png' />
+					<Item.Content>
+						<Item.Header as={Link} to="/blog/5">ssh免密登录</Item.Header>
+						<Item.Meta>
+							<span>Yesterday 3:00 PM</span>
+							<span>accel</span>
+						</Item.Meta>
+						<Item.Description>配置ssh免密登录</Item.Description>
+						<Item.Extra as={Link} to="/blog/5">read more</Item.Extra>
+					</Item.Content>
 				</Item>
 			</ItemGroup>
 			

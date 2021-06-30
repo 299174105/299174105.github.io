@@ -34,6 +34,13 @@ export class BlogList extends React.Component {
 						<List.Description as={Link} to="/blog/4">install jellyfin on docker</List.Description>
 					</List.Content>
 				</List.Item>
+				<List.Item>
+					<List.Icon name='linux' size='large' verticalAlign='middle' />
+					<List.Content>
+						<List.Header as={Link} to="/blog/5">ssh免密登录</List.Header>
+						<List.Description as={Link} to="/blog/5">配置ssh免密登录</List.Description>
+					</List.Content>
+				</List.Item>
 			</List>
 		</div>);
 	}
