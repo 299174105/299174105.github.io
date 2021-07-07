@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import { List} from "semantic-ui-react";
 
-export class BlogList extends React.Component {
+export class RecommendList extends React.Component {
 	render() {
 		return (<div style={{margin:"10px 20px"}}>
 			<List divided relaxed>
