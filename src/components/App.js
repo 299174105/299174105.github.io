@@ -1,7 +1,7 @@
 import React from "react";
 import {HashRouter as Router, Link, Route, Switch} from "react-router-dom";
 import 'semantic-ui-css/semantic.min.css'
-import {About} from "./About";
+import About from "./About";
 import {Grid, Label, Menu, Pagination} from "semantic-ui-react";
 import "./app.css"
 import {Home} from "./Home";
@@ -64,9 +64,9 @@ class App extends React.Component{
 				<Switch>
 					<Route exact  path="/about"><About/></Route>
 				</Switch>
-			<Grid>
+				<Grid container stackable>
 				<Grid.Column width={12} >
-				<Switch>
+					<Switch>
 					<Route exact path={["/","/home","/blog"]}>
 						<Home postList ={this.state.postList}/>
 						<Pagination className="page-footer"
@@ -81,14 +81,13 @@ class App extends React.Component{
 					</Route>
 					<Route path="/blog/:id" component={Blog1}  />
 				</Switch>
-					
-					</Grid.Column>
+				</Grid.Column>
 				<Switch>
 					<Route exact  path={["/","/home","/blog","/blog/:id"]}>
 						<Grid.Column width={4}>
-					<h4>推荐</h4>
-					<RecommendList/>
-					<h4>标签</h4>
+							<h4>推荐</h4>
+							<RecommendList/>
+							<h4>标签</h4>
 							<Label as='a' tag>
 								New
 							</Label>
@@ -109,15 +108,8 @@ class App extends React.Component{
 					</Route>
 				</Switch>
 				
-				</Grid>
+			</Grid>
 			</div>
-			
-			
-			
-			
-			
-			
-			
 			
 		</Router>
 	</div>
