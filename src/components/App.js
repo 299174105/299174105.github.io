@@ -11,7 +11,7 @@ import posts from "../apis/posts";
 
 class App extends React.Component{
 		handlePaginationChange = async (e, { activePage }) => {
-		const response = await posts.get(`/post/?page=${activePage-1}&size=4`);
+		const response = await posts.get(`/post/?page=${activePage-1}&size=8`);
 		const postList = response.data._embedded.post;
 		this.setState({postList})
 	};
@@ -25,7 +25,7 @@ class App extends React.Component{
 		}
 	}
 	async componentDidMount() {
-		const response = await posts.get("/post/?page=0&size=4");
+		const response = await posts.get("/post/?page=0&size=8");
 		const postList = response.data._embedded.post;
 		const pageInfo = response.data.page;
 		//console.log(response);
@@ -34,7 +34,7 @@ class App extends React.Component{
 	}
   render() {
   return (
-  	<div>
+  	<div className="rootContainer">
 		<Router>
 			
 			<div className="my-nav-bar">

@@ -29,3 +29,15 @@ div#root {
     text-transform: uppercase;
     text-align: center;
 }
+
+/*#root {
+	height: calc(95vh);
+}*/
+
+/*.rootContainer {
+	background-color: white;
+	box-shadow: 0 0 1px grey;
+	-webkit-box-shadow: 0 0 1px grey;
+	-moz-box-shadow: 0 0 1px gray;
+}*/
+
