@@ -22,8 +22,8 @@ export class Home extends React.Component {
 		const postList = this.state.postList.concat(response.data._embedded.post);
 		const next = response.data._links.next===undefined?'':response.data._links.next.href
 		const hasMore = response.data._links.next !== undefined
+		//setTimeout(()=>this.setState({postList,next,hasMore}),1500)
 		this.setState({postList,next,hasMore})
-		//console.log(this.state);
 	};
 	
 	async componentDidMount() {
@@ -57,12 +57,6 @@ export class Home extends React.Component {
 			})}
 						 </ItemGroup>
         </InfiniteScroll>
-				
-			
-			
-			
-			
-			
 		</div>;
 	}
 }
