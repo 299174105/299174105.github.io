@@ -4,15 +4,43 @@ import {Link} from "react-router-dom";
 import "./Home.css"
 import moment from "moment";
 import 'moment/locale/zh-cn'
+import InfiniteScroll from "react-infinite-scroll-component";
+import posts from "../apis/posts";
 
 export class Home extends React.Component {
-
+	
+	constructor(props) {
+		super(props);
+		this.state = {
+			postList: [],
+			hasMore: true,
+			next: '/post'
+		}
+	}
+	handlePaginationChange = async () => {
+		const response = await posts.get(`${this.state.next}`);
+		const postList = this.state.postList.concat(response.data._embedded.post);
+		const next = response.data._links.next===undefined?'':response.data._links.next.href
+		const hasMore = response.data._links.next !== undefined
+		this.setState({postList,next,hasMore})
+		//console.log(this.state);
+	};
+	
+	async componentDidMount() {
+		await this.handlePaginationChange();
+	}
 	
 	render() {
 		return <div className="home">
 			
-			<ItemGroup >
-				{this.props.postList.map((p,index)=> {
+				 <InfiniteScroll
+          dataLength={this.state.postList.length}
+          next={this.handlePaginationChange}
+          hasMore={this.state.hasMore}
+          loader={<h2 className="animate">Loading...</h2>}
+        >
+					 <ItemGroup >
+         {this.state.postList.map((p,index)=> {
 			const url =`/blog/${p.title}`;
 			return	<Item key={index} >
 					<Item.Image as={Link} to={url}  size='small' src={p.cover}/>
@@ -27,9 +55,12 @@ export class Home extends React.Component {
 					</Item.Content>
 				</Item>
 			})}
+						 </ItemGroup>
+        </InfiniteScroll>
+				
 			
 			
-			</ItemGroup>
+			
 			
 			
 		</div>;

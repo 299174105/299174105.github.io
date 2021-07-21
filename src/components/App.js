@@ -1,13 +1,13 @@
 import React from "react";
 import {HashRouter as Router, Link, Route, Switch} from "react-router-dom";
 import 'semantic-ui-css/semantic.min.css'
-import About from "./About";
-import {Grid, Label, Menu, Pagination} from "semantic-ui-react";
+import {Grid, Label, Menu} from "semantic-ui-react";
 import "./app.css"
 import {Home} from "./Home";
 import {RecommendList} from "./RecommendList";
 import Blog1 from "./Blog1";
 import posts from "../apis/posts";
+import About from "./About";
 
 class App extends React.Component{
 		handlePaginationChange = async (e, { activePage }) => {
@@ -68,8 +68,8 @@ class App extends React.Component{
 				<Grid.Column width={12} >
 					<Switch>
 					<Route exact path={["/","/home","/blog"]}>
-						<Home postList ={this.state.postList}/>
-						<Pagination className="page-footer"
+						<Home/>
+					{/*	<Pagination className="page-footer"
 									firstItem={null}
 									lastItem={null}
 									defaultActivePage={1}
@@ -77,7 +77,7 @@ class App extends React.Component{
 									secondary
 									totalPages={this.state.pageInfo.totalPages}
 									onPageChange={this.handlePaginationChange}
-						/>
+						/>*/}
 					</Route>
 					<Route path="/blog/:id" component={Blog1}  />
 				</Switch>
