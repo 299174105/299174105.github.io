@@ -1,7 +1,7 @@
-import React from "react";
+import React, {createRef} from "react";
 import {HashRouter as Router, Link, Route, Switch} from "react-router-dom";
 import 'semantic-ui-css/semantic.min.css'
-import {Grid, Label, Menu} from "semantic-ui-react";
+import {Grid, Label, Menu, Ref, Sticky} from "semantic-ui-react";
 import "./app.css"
 import {Home} from "./Home";
 import {RecommendList} from "./RecommendList";
@@ -24,6 +24,7 @@ class App extends React.Component{
 			visible: true
 		}
 	}
+	
 	async componentDidMount() {
 		const response = await posts.get("/post/?page=0&size=8");
 		const postList = response.data._embedded.post;
@@ -32,11 +33,11 @@ class App extends React.Component{
 		this.setState({postList,pageInfo})
 		
 	}
+	contextRef = createRef()
   render() {
   return (
   	<div className="rootContainer">
 		<Router>
-			
 			<div className="my-nav-bar">
 				<Menu pointing secondary>
 					{/*<Menu.Item
@@ -64,8 +65,9 @@ class App extends React.Component{
 				<Switch>
 					<Route exact  path="/about"><About/></Route>
 				</Switch>
-				<Grid container stackable>
-				<Grid.Column width={12} >
+				<Grid container stackable className="main-container">
+					<Ref innerRef={this.contextRef}>
+				<Grid.Column mobile={16} tablet={12} computer={12} >
 					<Switch>
 					<Route exact path={["/","/home","/blog"]}>
 						<Home/>
@@ -82,12 +84,14 @@ class App extends React.Component{
 					<Route path="/blog/:id" component={Blog1}  />
 				</Switch>
 				</Grid.Column>
+					</Ref>
 				<Switch>
 					<Route exact  path={["/","/home","/blog","/blog/:id"]}>
-						<Grid.Column width={4}>
+						<Grid.Column tablet={4} computer={4} only={'computer'}>
+							<Sticky context={this.contextRef}>
 							<h4>推荐</h4>
 							<RecommendList/>
-							<h4>标签</h4>
+							{/*<h4>标签</h4>
 							<Label as='a' tag>
 								New
 							</Label>
@@ -103,7 +107,8 @@ class App extends React.Component{
 							</Label>
 							<Label as='a' tag>
 								Nginx
-							</Label>
+							</Label>*/}
+							</Sticky>
 				</Grid.Column>
 					</Route>
 				</Switch>

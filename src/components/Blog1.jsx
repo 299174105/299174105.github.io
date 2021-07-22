@@ -17,6 +17,7 @@ class Blog1 extends React.Component {
 	render() {
 		return (
 			<div key={this.props.match.params.id} className="blog-container">
+				{/*<div>Header area!</div>*/}
 		<div  className={"markdown-body"}>
 			<Markdown  children={this.state.markdown}/>
 			
@@ -24,6 +25,7 @@ class Blog1 extends React.Component {
 			{/*	<div className="next-prev-blog">
 					👏<div>prev</div><div>next</div>
 			</div>*/}
+				{/*<div>Footer area</div>*/}
 				</div>
 		);
 	}
